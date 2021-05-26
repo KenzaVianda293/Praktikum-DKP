@@ -1,0 +1,72 @@
+from tkinter import * 
+from tkinter import ttk
+from tkinter import messagebox 
+
+top = Tk()  
+top.geometry("300x600")
+top.title("Pembelian Voucher Game Online")
+bg = PhotoImage(file = "C://ESD//Yoru.png.png")
+label1 = Label( top, image = bg)
+label1.place(x = -1800, y = -200)
+
+def Beli():
+    if (stringID.get()) == 0:
+        messagebox.showerror("Eror","Tolong Masukan ID Pemain Terlebih Dahulu")
+        return
+    if harga.get()== 0:
+        messagebox.showerror("Error","Voucher Game (VG) Harus Terisi")
+        return
+    elif harga.get() == 1:
+        Total ="Rp. 50.000  "
+        Redeem = "AKHE-KASL-WENW"
+    elif harga.get() == 2:
+        Total ="Rp. 105.000 "
+        Redeem = "HASN-YHWE-LASK"
+    elif harga.get() == 3:
+        Total ="Rp. 170.000 "
+        Redeem = "UEHE-OPEW-ABSS"
+    elif harga.get() == 4:
+        Total ="Rp. 210.000 "
+        Redeem ="HSAE-ANSW-LOWK"
+    
+
+    Kirim = "Pembelian Voucher Game Dengan ID " " "+ stringID.get()+ " ""Seharga" " " +Total+" ""Untuk Game"" "+strGame.get()+" ""Menggunakan Pembayaran Via" " "+ strPembayaran.get()+" " "Telah Sukses Silakan Redeem Kode berikut di dalam Game Anda"" "+Redeem
+    messagebox.showinfo("Notifikasi", Kirim)
+
+lbJudul = Label (top, text = " Pembelian Voucher Game Online\t:").place (x=60,y=10)
+lbNama1 = Label(text = "ID Pemain\t").place(x = 10,y = 40)
+lbGame  = Label(text = "Game\t").place(x = 10,y = 70)
+lbMP  = Label(text = "Pembayaran\t").place(x = 10,y = 100)
+lbpk = Label(text = "Nominal\t").place(x = 10, y=130)
+
+stringID = StringVar()
+iID = Entry(top,width = 20, textvariable=stringID).place(x = 140, y = 40)
+
+harga = IntVar()
+R1 = Radiobutton(top, text="500 VG (Rp 50.000)", variable=harga, value=1).place(x=140, y=130)  
+R2 = Radiobutton(top, text="1.000VG (Rp 105.000", variable=harga, value=2).place(x=140, y=160)  
+R3 = Radiobutton(top, text="1.700 VG (Rp 170.000)",variable=harga, value=3).place(x=140, y=190)
+R4 = Radiobutton(top, text="2.000 VG (Rp 210.000)", variable=harga, value=4).place(x=140, y=220)
+
+strGame = StringVar(value='Pilih Game') 
+Cb1 = ttk.Combobox(top, width = 17, textvariable = strGame, state="readonly")
+Cb1.place(x=140, y=70)
+Cb1['values'] = ('Valorant',
+                 'Free Fire',
+                 'Mobile Legend',
+                 'PUBG Mobile')
+strPembayaran = StringVar(value='Pilih Pembayaran') 
+Cb2 = ttk.Combobox(top, width = 17, textvariable = strPembayaran, state="readonly")
+Cb2.place(x=140, y=100)
+Cb2['values'] = ('Alfamart',
+                 'Dana',
+                 'Ovo',
+                 'Indomart') 
+
+btn1 = Button(top, command = Beli, text="Kirim").place(x=110,y=280)
+
+top.mainloop()    
+
+
+
+
