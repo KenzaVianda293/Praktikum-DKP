@@ -27,7 +27,7 @@ def Beli():
         Redeem ="HSAE-ANSW-LOWK"
     
 
-    Kirim = "Pembelian Voucher Game Dengan ID " " "+ stringID.get()+ " ""Seharga" " " +Total+" ""Untuk Game"" "+strGame.get()+" ""Menggunakan Pembayaran Via" " "+ strPembayaran.get()+" " "Telah Sukses Silakan Redeem Kode berikut di dalam Game Anda"" "+Redeem
+    Kirim = "Pemesanan Voucher Game Dengan ID " " "+ stringID.get()+ " ""Seharga" " " +Total+" ""Untuk Game"" "+strGame.get()+" ""Menggunakan Pembayaran Via" " "+ strPembayaran.get()+" " "Telah Sukses Silakan Redeem Kode berikut"" "+Redeem
     messagebox.showinfo("Notifikasi", Kirim)
 
 lbJudul = Label (top, text = " Pembelian Voucher Game Online\t:").place (x=60,y=10)
