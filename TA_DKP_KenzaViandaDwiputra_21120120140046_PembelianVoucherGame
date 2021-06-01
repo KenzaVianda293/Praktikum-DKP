@@ -10,9 +10,6 @@ label1 = Label( top, image = bg)
 label1.place(x = -1800, y = -200)
 
 def Beli():
-    if (stringID.get()) == 0:
-        messagebox.showerror("Eror","Tolong Masukan ID Pemain Terlebih Dahulu")
-        return
     if harga.get()== 0:
         messagebox.showerror("Error","Voucher Game (VG) Harus Terisi")
         return
