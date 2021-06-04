@@ -30,7 +30,7 @@ def Beli():
     Kirim = "Pemesanan Voucher Game Dengan ID " " "+ stringID.get()+ " ""Seharga" " " +Total+" ""Untuk Game"" "+strGame.get()+" ""Menggunakan Pembayaran Via" " "+ strPembayaran.get()+" " "Telah Sukses Silakan Redeem Kode berikut"" "+Redeem
     messagebox.showinfo("Notifikasi", Kirim)
 
-lbJudul = Label (top, text = " Pembelian Voucher Game Online\t:").place (x=60,y=10)
+lbJudul = Label (top, text = " Voucher Game Store\t:").place (x=60,y=10)
 lbNama1 = Label(text = "ID Pemain\t").place(x = 10,y = 40)
 lbGame  = Label(text = "Game\t").place(x = 10,y = 70)
 lbMP  = Label(text = "Pembayaran\t").place(x = 10,y = 100)
@@ -41,7 +41,7 @@ iID = Entry(top,width = 20, textvariable=stringID).place(x = 140, y = 40)
 
 harga = IntVar()
 R1 = Radiobutton(top, text="500 VG (Rp 50.000)", variable=harga, value=1).place(x=140, y=130)  
-R2 = Radiobutton(top, text="1.000VG (Rp 105.000", variable=harga, value=2).place(x=140, y=160)  
+R2 = Radiobutton(top, text="1.000 VG (Rp 105.000", variable=harga, value=2).place(x=140, y=160)  
 R3 = Radiobutton(top, text="1.700 VG (Rp 170.000)",variable=harga, value=3).place(x=140, y=190)
 R4 = Radiobutton(top, text="2.000 VG (Rp 210.000)", variable=harga, value=4).place(x=140, y=220)
 
